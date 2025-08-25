@@ -1,0 +1,126 @@
+/* Container to center form */
+.url-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh;
+  /* background: linear-gradient(135deg, #74ebd5, #9face6); */
+  padding: 20px;
+}
+
+/* Card design */
+.url-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.url-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* Form */
+.url-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.url-input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+.url-input:focus {
+  border-color: #6c63ff;
+  outline: none;
+}
+
+.url-input.error {
+  border-color: red;
+}
+
+.url-btn {
+  background: #6c63ff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.url-btn:hover {
+  background: #4e47d6;
+  transform: scale(1.05);
+}
+
+.url-btn:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+/* Error */
+.url-error {
+  color: red;
+  margin-top: 5px;
+}
+
+/* Result */
+.url-result {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.short-url-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f4f6ff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.short-url-box a {
+  color: #6c63ff;
+  font-weight: bold;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.short-url-box a:hover {
+  text-decoration: underline;
+}
+
+.copy-btn {
+  background: #222;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.copy-btn:hover {
+  background: #444;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
