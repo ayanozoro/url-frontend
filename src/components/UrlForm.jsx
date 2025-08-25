@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { API_BASE_URL } from "../config";
 import "./UrlForm.css"; // Import the new CSS file
 
 const UrlForm = () => {
@@ -36,7 +37,7 @@ const UrlForm = () => {
 
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/api/shorten", {
+      const res = await axios.post(`${API_BASE_URL}/api/shorten`, {
         longUrl,
       });
       setShortUrl(res.data.shortUrl);

@@ -1,5 +1,6 @@
 // src/components/AdminLogin.js
 import React, { useState } from 'react';
+import { API_BASE_URL } from '../config';
 import './AdminLogin.css';
 
 const AdminLogin = ({ onLogin }) => {
@@ -13,7 +14,7 @@ const AdminLogin = ({ onLogin }) => {
     const credentials = btoa(`${username}:${password}`);
 
     try {
-      const res = await fetch('http://localhost:5000/api/admin', {
+      const res = await fetch(`${API_BASE_URL}/api/admin`, {
         headers: {
           'Authorization': `Basic ${credentials}`,
         },

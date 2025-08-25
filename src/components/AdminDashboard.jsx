@@ -1,5 +1,6 @@
 // src/components/AdminDashboard.js
 import React, { useEffect, useState } from 'react';
+import { API_BASE_URL } from '../config';
 import AdminLogin from './AdminLogin';
 
 const AdminDashboard = ({ onLogin, isAuthenticated }) => {
@@ -21,7 +22,7 @@ const AdminDashboard = ({ onLogin, isAuthenticated }) => {
       const auth = localStorage.getItem('auth');
       if (!auth) return;
 
-      const res = await fetch('http://localhost:5000/api/admin', {
+      const res = await fetch(`${API_BASE_URL}/api/admin`, {
         headers: {
           'Authorization': `Basic ${auth}`,
         },
