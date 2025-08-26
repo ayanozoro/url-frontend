@@ -44,7 +44,7 @@ const AdminLogin = ({ onLogin }) => {
           />
           <input 
             value={password}
-            style={{backgroundcolor:'black'}}
+            style={{backgroundColor:'black'}}
             onChange={(e) => setPassword(e.target.value)} 
             type="password" 
             placeholder="Password" 
