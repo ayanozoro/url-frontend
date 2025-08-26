@@ -43,7 +43,8 @@ const AdminLogin = ({ onLogin }) => {
             required 
           />
           <input 
-            value={password} 
+            value={password}
+            style={{backgroundcolor:'black'}}
             onChange={(e) => setPassword(e.target.value)} 
             type="password" 
             placeholder="Password" 
