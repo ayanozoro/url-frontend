@@ -95,7 +95,7 @@ const AdminDashboard = ({ onLogin, isAuthenticated }) => {
                 <tr key={url._id} style={{ borderBottom: '1px solid #eee' }}>
                   <td style={{ padding: '12px' }}>
                     <a 
-                      href={`/${url.shortCode}`} 
+                      href={`${API_BASE_URL}/${url.shortCode}`}  
                       target="_blank" 
                       rel="noreferrer"
                       style={{ textDecoration: 'none', color: '#1976d2' }}
